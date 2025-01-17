@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/_GAME_/Player/Visuals/Sprites/AC_Player.controller.meta
-guid: f8ec0a160e7ca3e4db3dc29d771ca775
-========
-guid: 0f7488e3c9886f8498cf20492d076a62
->>>>>>>> level2:Assets/_GAME_/World/Map/Tiles/Levelthree/tilesFloor_0.asset.meta
+guid: c48eee5036d8f4142980d251c0aaa13a
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000

@@ -32,6 +32,9 @@ public class Player_Controller : MonoBehaviour
 
     private readonly int _animMoveRight = Animator.StringToHash("Anim_Player_Move_Right");
     private readonly int _animIdleRight = Animator.StringToHash("Anim_Player_Idle_Right");
+    private readonly int _animTop = Animator.StringToHash("Anim_Player_Top");
+    private readonly int _animDown = Animator.StringToHash("Anim_Player_Down");
+
 
     #endregion 
 
@@ -73,15 +76,24 @@ public class Player_Controller : MonoBehaviour
     #region Animation Logic
     private void CalculateFacingDirection()
     {
-        if (_moveDir.x > 0)
+        if (_moveDir.y > 0)
+        {
+            _facingDirection = Directions.UP;
+        }
+        else if (_moveDir.y < 0)
+        {
+            _facingDirection = Directions.DOWN;
+        }
+        else if (_moveDir.x > 0)
         {
             _facingDirection = Directions.RIGHT;
         }
-        else if (_moveDir.x<0)
+        else if (_moveDir.x < 0)
         {
             _facingDirection = Directions.LEFT;
         }
     }
+
 
     private void UpdateAnimation()
     {
@@ -94,14 +106,26 @@ public class Player_Controller : MonoBehaviour
             _spriteRenderer.flipX = false;
         }
 
-        if (_moveDir.sqrMagnitude > 0 ) // Moving
+        if (_moveDir.sqrMagnitude > 0) // Moving
         {
-            _animator.CrossFade(_animMoveRight,0);
+            if (_facingDirection == Directions.UP)
+            {
+                _animator.CrossFade(_animTop, 0);
+            }
+            else if (_facingDirection == Directions.DOWN)
+            {
+                _animator.CrossFade(_animDown, 0);
+            }
+            else
+            {
+                _animator.CrossFade(_animMoveRight, 0); // Utilisez des animations différentes selon la direction
+            }
         }
         else
         {
-            _animator.CrossFade(_animIdleRight,0);
+            _animator.CrossFade(_animIdleRight, 0);
         }
     }
+
     #endregion
 }
