@@ -7,6 +7,10 @@ using UnityEngine;
 public class Player_Controller : MonoBehaviour
 {
 
+    #region Enums
+    private enum Directions {UP, DOWN, LEFT, RIGHT}
+    #endregion
+
     #region Editor Data 
         [Header("Movement Attributes")]
         [SerializeField] float _moveSpeed = 50f; 
@@ -14,7 +18,9 @@ public class Player_Controller : MonoBehaviour
 
         [Header("Dependencies")]
         [SerializeField] Rigidbody2D _rb;
-        [SerializeField] Animation _animator;
+
+        [SerializeField] Animator _animator;
+
         [SerializeField] SpriteRenderer _spriteRenderer;
 
     #endregion
@@ -22,6 +28,11 @@ public class Player_Controller : MonoBehaviour
 
     #region Internal Data
     private Vector2 _moveDir = Vector2.zero;
+    private Directions _facingDirection = Directions.RIGHT;
+
+    private readonly int _animMoveRight = Animator.StringToHash("Anim_Player_Move_Right");
+    private readonly int _animIdleRight = Animator.StringToHash("Anim_Player_Idle_Right");
+
     #endregion 
 
     #region Tick 
@@ -29,6 +40,8 @@ public class Player_Controller : MonoBehaviour
     private void Update()
     {
         GatherInput();
+        CalculateFacingDirection();
+        UpdateAnimation();
     }
 
 
@@ -53,7 +66,42 @@ public class Player_Controller : MonoBehaviour
     #region Movement Logic
         private void MovementUpdate()
         {
-            _rb.linearVelocity = _moveDir * _moveSpeed * Time.fixedDeltaTime;
+            _rb.linearVelocity = _moveDir.normalized * _moveSpeed * Time.fixedDeltaTime;
         }
+    #endregion
+
+    #region Animation Logic
+    private void CalculateFacingDirection()
+    {
+        if (_moveDir.x > 0)
+        {
+            _facingDirection = Directions.RIGHT;
+        }
+        else if (_moveDir.x<0)
+        {
+            _facingDirection = Directions.LEFT;
+        }
+    }
+
+    private void UpdateAnimation()
+    {
+        if (_facingDirection == Directions.LEFT)
+        {
+            _spriteRenderer.flipX = true;
+        }
+        else if (_facingDirection == Directions.RIGHT)
+        {
+            _spriteRenderer.flipX = false;
+        }
+
+        if (_moveDir.sqrMagnitude > 0 ) // Moving
+        {
+            _animator.CrossFade(_animMoveRight,0);
+        }
+        else
+        {
+            _animator.CrossFade(_animIdleRight,0);
+        }
+    }
     #endregion
 }
