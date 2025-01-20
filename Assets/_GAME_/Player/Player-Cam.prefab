@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5565988058894242447}
   - component: {fileID: 1597370301971212420}
   - component: {fileID: 3504942588249473863}
-  - component: {fileID: 840530066984412381}
+  - component: {fileID: 3814268226729175964}
   m_Layer: 0
-  m_Name: Player (1)
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,8 +78,8 @@ MonoBehaviour:
   _rb: {fileID: 1597370301971212420}
   _animator: {fileID: 4841019969757733881}
   _spriteRenderer: {fileID: 7428432539466138543}
---- !u!61 &840530066984412381
-BoxCollider2D:
+--- !u!70 &3814268226729175964
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -112,18 +112,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.053670883, y: -1.7709188}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 2.2620354, y: 1.3787894}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.014739513, y: -1.139231}
+  m_Size: {x: 0.9618387, y: 0.9618392}
+  m_Direction: 0
 --- !u!1 &1253509096036259633
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +159,7 @@ GameObject:
   - component: {fileID: 2760382046880391136}
   - component: {fileID: 5476749821497476948}
   m_Layer: 0
-  m_Name: Player Cam (1)
+  m_Name: Player Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5819248704049707933}
   m_Layer: 0
-  m_Name: Player-Cam 1
+  m_Name: Player-Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

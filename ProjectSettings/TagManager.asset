@@ -50,5 +50,8 @@ TagManager:
   - name: Character
     uniqueID: 2692309539
     locked: 0
+  - name: ESCAPE
+    uniqueID: 2243297993
+    locked: 0
   m_RenderingLayers:
   - Default
