@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/_GAME_/Player/Visuals/Sprites/Anim_Player_Move_Right.anim.meta
-guid: ad95273af6591c64694312b0e3c87766
+<<<<<<<< HEAD:Assets/_GAME_/Player/Visuals/Sprites/Anim_Player_Idle_Right.anim.meta
+guid: 60b27d7434146d8428c25ddd7488e065
 ========
-guid: c34a162c13e42a24e94b15e4428fb006
->>>>>>>> level2:Assets/_GAME_/World/Map/Tiles/Levelthree/tilesFloor_10.asset.meta
+guid: feb1c7d824bee0d4a8c2cf4b3c095327
+>>>>>>>> level2:Assets/_GAME_/World/Map/Tiles/Levelthree/tilesFloor_1.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
