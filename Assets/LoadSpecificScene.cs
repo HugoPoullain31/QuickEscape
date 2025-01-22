@@ -1,12 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+
 public class LoadSpecificScene : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision) 
+    public string sceneName; 
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) 
+        if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Level02");
+            SceneManager.LoadScene(sceneName); 
         }
     }
 }
