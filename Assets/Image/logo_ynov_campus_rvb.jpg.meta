@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      logo_ynov_campus_rvb_0: -6432541424936487677
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
