@@ -149,6 +149,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 715588312}
+  - {fileID: 816035797}
   - {fileID: 1664443205}
   m_Father: {fileID: 682079663}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -430,6 +432,156 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &715588311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715588312}
+  - component: {fileID: 715588314}
+  - component: {fileID: 715588313}
+  m_Layer: 5
+  m_Name: logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &715588312
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715588311}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 185418768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 353.1106, y: -1090.8774}
+  m_SizeDelta: {x: 532, y: 208}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &715588313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715588311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6432541424936487677, guid: f31d2b83c167a4140bd93f9748779a6c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &715588314
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715588311}
+  m_CullTransparentMesh: 1
+--- !u!1 &816035796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816035797}
+  - component: {fileID: 816035799}
+  - component: {fileID: 816035798}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &816035797
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816035796}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 185418768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -312.14017, y: -1090.8774}
+  m_SizeDelta: {x: 316, y: 422.46}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &816035798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816035796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 5467609561470573404, guid: 2236ec96010c65d46b47537d8d891fe3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &816035799
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816035796}
+  m_CullTransparentMesh: 1
 --- !u!1 &1664443204
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,18 +640,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<SIZE=200><B>QUICKESCAPE  2D</B>\r\n</SIZE>\r\n<SIZE=70>UN JEU D'ESCAPE
-    GAME EN 2D CR\xC9\xC9 DANS LE CADRE D'UN PROJET D'\xC9COLE</SIZE>\r\n\r\n\r\n<SIZE=120>-
+    GAME EN 2D CREE DANS LE CADRE D'UN PROJET D'\xC9COLE</SIZE>\r\n\r\n\r\n<SIZE=120>-
     GRAPHISMES -</SIZE>\r\n\r\n<SIZE=60>A ESCAPE IN THE MYSTERY WORLD\r\n<I>PAR RAPHAEL
     LAMARCHE, SAM HOUSER </I></SIZE>\r\n\r\n<SIZE=60>CHARACTER\r\n<I>PAR HUGO POULLAIN</I></SIZE>\r\n\r\n<SIZE=60>PROPS
     & BACKGROUNDS\r\n<I>PAR RAPHAEL LAMARCHE, AMALRIC PAUL, BENNETT FODDY</I></SIZE>\r\n\r\n<SIZE=120>-
-    AUDIO -</SIZE>\r\n\r\n<SIZE=60>INTENSE ADVENTURE\r\n<I>PAR TREVOR LENTZ</I></SIZE>\r\n\r\n<SIZE=60>ESCAPE
-    TENSION\r\n<I>PAR TOM PETER</I></SIZE>\r\n\r\n<SIZE=60>8-BIT SOUND EFFECTS LIBRARY\r\n<I>PAR
-    LITTLE ROBOT SOUND FACTORY</I></SIZE>\r\n\r\n<SIZE=120>- POLICE -</SIZE>\r\n\r\n<SIZE=60>PIXELATED\r\n<I>PAR
+    AUDIO -</SIZE>\n\n<SIZE=60>Dark Ambience Loop\r\n\r\n<I>PAR QUBODUP</I></SIZE>\r\n\r\n<SIZE=60>Game-Game\r\n<I>PAR
+    Metaruka</I></SIZE>\r\n\r\n<SIZE=60>Bleeding out\r\n<I>PAR Brandon Morris</I></SIZE>\r\n\r\n\r\n<SIZE=60>INTENSE
+    ADVENTURE\r\n<I>PAR TREVOR LENTZ</I></SIZE>\r\n\r\n<SIZE=60>ESCAPE TENSION\r\n<I>PAR
+    TOM PETER</I></SIZE>\r\n\r\n<SIZE=60>8-BIT SOUND EFFECTS LIBRARY\r\n<I>PAR LITTLE
+    ROBOT SOUND FACTORY</I></SIZE>\r\n\r\n<SIZE=120>- POLICE -</SIZE>\r\n\r\n<SIZE=60>PIXELATED\r\n<I>PAR
     SKYLAR PARK</I></SIZE>\r\n\r\n<SIZE=120>- REMERCIEMENTS  -</SIZE>\r\n\r\n<SIZE=60><I>TOULOUSE
     YNOV CAMPUS<3</I></SIZE>"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2dad3d43d82472342899ed154c4444d2, type: 2}
+  m_sharedMaterial: {fileID: 9006179566864973482, guid: 2dad3d43d82472342899ed154c4444d2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
