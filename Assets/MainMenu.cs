@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
     public string levelToLoad;
 
     public GameObject settingWindow;
+    public GameObject rulesWindow;
+
   public void StartGame()
   {
         SceneManager.LoadScene(levelToLoad);
@@ -26,5 +28,17 @@ public class MainMenu : MonoBehaviour
   {
       Application.Quit();
     
+  }
+
+
+  public void RulesButton()
+  {
+    rulesWindow.SetActive(true);
+    
+  }
+
+  public void CloseRulesWindow()
+  {
+    rulesWindow.SetActive(false);
   }
 }
