@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1876735859161295727, guid: 925620af21aed7a4b88e945681599f42, type: 3}
       propertyPath: sceneName
-      value: 
+      value: Level08
       objectReference: {fileID: 0}
     - target: {fileID: 8265616055564523951, guid: 925620af21aed7a4b88e945681599f42, type: 3}
       propertyPath: m_Name
@@ -8631,6 +8631,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5617148659422571722, guid: 75cfc09bd94f0e24b94cdb17f928c773, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1021873702}
     - target: {fileID: 5958083114620351673, guid: 75cfc09bd94f0e24b94cdb17f928c773, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -11631,6 +11635,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e28602701f956b74a91dced342140b61, type: 3}
+--- !u!1 &1021873702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 358049837184357924, guid: e28602701f956b74a91dced342140b61, type: 3}
+  m_PrefabInstance: {fileID: 1021873701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1249488518
 GameObject:
   m_ObjectHideFlags: 0
