@@ -9,11 +9,19 @@ public class MainMenu : MonoBehaviour
     public GameObject settingWindow;
     public GameObject rulesWindow;
 
-  public void StartGame()
-  {
-        SceneManager.LoadScene(levelToLoad);
+  public void StartClassicMode()
+    {
+        GameMode.SetMode(false); // Mode classique
+        SceneManager.LoadScene(1); // Charge la première scène
+    }
 
-  }
+    public void StartBouffilMode()
+    {
+        GameMode.SetMode(true); // Mode bouffil
+        SceneManager.LoadScene(1); // Charge la première scène
+    }
+
+  
    public void SettingButton()
   {
     settingWindow.SetActive(true);

@@ -8,43 +8,79 @@ public class LevelTimer : MonoBehaviour
     private float currentTimer;
 
     [Header("Paramètres du Joueur")]
-    public GameObject player; // Référence au joueur
-    public Transform playerStartPosition; // Position de départ du joueur
+    public GameObject player;
+    public Transform playerStartPosition;
 
+    private bool isLevelCompleted = false;
 
-    private bool isLevelCompleted = false; // Indique si le joueur a terminé le niveau
+    [Header("Groupes de niveaux")]
+    public int easyStartIndex = 1;
+    public int mediumStartIndex = 5;
+    public int hardcoreStartIndex = 9;
 
     private void Start()
     {
-        RestartTimer(); // Démarre le timer au début du niveau
+        RestartTimer();
     }
 
     private void Update()
     {
         if (!isLevelCompleted)
         {
-            currentTimer -= Time.deltaTime; // Réduit le timer au fil du temps
+            currentTimer -= Time.deltaTime;
+
             if (currentTimer <= 0f)
             {
-                // Si le timer expire, réinitialise le niveau
-                Debug.Log("Temps écoulé ! Redémarrage du niveau.");
-                RestartLevel();
+                if (GameMode.isBouffilMode)
+                {
+                    // Mode bouffil : retour au début du groupe
+                    Debug.Log("Mode bouffil : temps écoulé. Retour au début du niveau.");
+                    RestartLevelGroup();
+                }
+                else
+                {
+                    // Mode classique : respawn dans la même salle
+                    Debug.Log("Mode classique : temps écoulé. Respawn dans la salle actuelle.");
+                    RestartLevel();
+                }
             }
         }
     }
 
     private void RestartTimer()
     {
-        currentTimer = timerDuration; // Réinitialise le timer
+        currentTimer = timerDuration;
     }
 
     private void RestartLevel()
     {
-        // Réinitialise la position du joueur
+        // Mode classique : respawn le joueur
         player.transform.position = playerStartPosition.position;
-
-        // Réinitialise le timer
         RestartTimer();
     }
 
+    private void RestartLevelGroup()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int startIndex = GetGroupStartIndex(currentSceneIndex);
+        SceneManager.LoadScene(startIndex);
+    }
+
+    private int GetGroupStartIndex(int currentSceneIndex)
+    {
+        if (currentSceneIndex >= easyStartIndex && currentSceneIndex < mediumStartIndex)
+            return easyStartIndex;
+        else if (currentSceneIndex >= mediumStartIndex && currentSceneIndex < hardcoreStartIndex)
+            return mediumStartIndex;
+        else
+            return hardcoreStartIndex;
+    }
+
+    public void OnPlayerFindsExit()
+    {
+        isLevelCompleted = true;
+        Debug.Log("Niveau terminé !");
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(nextSceneIndex);
+    }
 }
