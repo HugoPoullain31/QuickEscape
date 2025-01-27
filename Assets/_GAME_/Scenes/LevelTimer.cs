@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelTimer : MonoBehaviour
 {
     [Header("Paramètres du Timer")]
-    public float timerDuration = 10f; // Durée du timer en secondes
+    public float timerDuration = 10f; 
     private float currentTimer;
 
     [Header("Paramètres du Joueur")]
@@ -54,7 +54,6 @@ public class LevelTimer : MonoBehaviour
 
     private void RestartLevel()
     {
-        // Mode classique : respawn le joueur
         player.transform.position = playerStartPosition.position;
         RestartTimer();
     }
